@@ -6,11 +6,15 @@ export const Portofolio = () => {
     return <Wrapper>
         <div className="portofolio">
             <h2>Примеры проектов</h2>
-            <h1 style={{
-                fontSize: "50px",
-                textAlign: "center"
-            }}>Всему свое время!</h1>
             <div className="cards">
+                <div className="cards-stab">
+                    <div className="cards-stab-text">
+                        <div>Нет идеи, которую стоит воплотить.</div>
+                        <div>А может, она у вас.</div>
+                        <div>Всё зависит не от средств, а от смысла.</div>
+                        <div>Потому идей так мало.</div>
+                    </div>
+                </div>
                 <Card />
                 <Card />
                 <Card />

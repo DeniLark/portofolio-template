@@ -4,9 +4,33 @@ $colorAccent: #915EFF;
 $colorMuted: #1A1625; // панели / бордеры
 $colorHighlight: #7C4DFF; // hover, ссылки
 
+.cards {
+    position: relative;
+
+    &-stab {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #1A1625;
+        color: #EDEDED;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero {
+        padding-top: 200px !important;
+    }
+}
+
 @media (max-width: 800px) {
     .cards {
         flex-wrap: wrap;
+        height: 500px;
+        overflow: hidden;
     }
 }
 
@@ -19,18 +43,10 @@ $colorHighlight: #7C4DFF; // hover, ссылки
     }
 }
 
-@media (max-width: 650px) {
-    .hero {
-        padding-top: 200px !important;
-    }
-}
-
 @media (max-width: 1200px) {
     .container {
         padding: 0 15px;
     }
-
-
 }
 
 .hero-icon {
