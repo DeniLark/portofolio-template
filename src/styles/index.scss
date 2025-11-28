@@ -7,6 +7,13 @@ $colorHighlight: #7C4DFF; // hover, ссылки
 .cards {
     position: relative;
 
+    @media (max-width: 800px) {
+        flex-wrap: wrap;
+        height: 500px; // временное решение
+        overflow: hidden; // временное решение
+    }
+
+    // временное решение
     &-stab {
         position: absolute;
         width: 100%;
@@ -20,40 +27,12 @@ $colorHighlight: #7C4DFF; // hover, ссылки
     }
 }
 
-@media (max-width: 650px) {
-    .hero {
-        padding-top: 200px !important;
-    }
-}
-
-@media (max-width: 800px) {
-    .cards {
-        flex-wrap: wrap;
-        height: 500px;
-        overflow: hidden;
-    }
-}
-
-@media (max-width: 1000px) {
-    .skill {
-        margin: 0 !important;
-        // margin-bottom: 10px !important;
-        padding: 50px;
-        width: 100% !important;
-    }
-}
-
-@media (max-width: 1200px) {
-    .container {
-        padding: 0 15px;
-    }
-}
-
 .hero-icon {
+    margin-bottom: 30px;
+
     span {
         display: inline-block;
         transform: rotate(90deg);
-        padding-bottom: 20px;
     }
 }
 
@@ -146,6 +125,10 @@ h3 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+
+    @media (max-width: 1200px) {
+        padding: 0 15px;
+    }
 }
 
 .header {
@@ -174,14 +157,26 @@ h3 {
     flex-direction: column;
     padding-top: 250px;
 
+    @media (max-width: 1000px) {
+        padding-top: 100px;
+    }
+
     &-content {
         width: 70%;
+
+        @media (max-width: 650px) {
+            width: 100%
+        }
     }
 
     &-text {
         text-align: center;
         font-size: 25px;
         // line-height: 1.4;
+
+        @media (max-width: 500px) {
+            font-size: 20px;
+        }
     }
 
     &-buttons {
@@ -204,6 +199,18 @@ h3 {
 .skill {
     width: 60%;
     margin: 30px auto;
+
+    @media (max-width: 1000px) {
+        margin: 0;
+        // margin-bottom: 10px !important;
+        padding: 50px;
+        width: 100%;
+    }
+
+    @media (max-width: 650px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .portofolio {
