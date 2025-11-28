@@ -20,9 +20,22 @@ $colorHighlight: #7C4DFF; // hover, ссылки
     }
 }
 
+@media (max-width: 500px) {
+    .hero-text {
+        font-size: 20px!important;
+    }
+}
+
 @media (max-width: 650px) {
     .hero {
-        padding-top: 200px !important;
+        &-content{
+            width: 100%!important;
+        }
+    }
+
+    .skill {
+        padding-left: 0!important;
+        padding-right: 0!important;
     }
 }
 
@@ -40,6 +53,10 @@ $colorHighlight: #7C4DFF; // hover, ссылки
         // margin-bottom: 10px !important;
         padding: 50px;
         width: 100% !important;
+    }
+
+    .hero {
+        padding-top: 100px!important;
     }
 }
 
