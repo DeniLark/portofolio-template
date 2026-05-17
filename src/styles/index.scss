@@ -15,8 +15,21 @@ $colorHighlight: #7C4DFF; // hover, ссылки
 
 }
 
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+        /* Начальная позиция на земле */
+    }
+
+    100% {
+        transform: translateY(-30px);
+        /* Высота прыжка */
+    }
+}
+
 .hero-icon {
     margin-bottom: 30px;
+    animation: jump 1s ease-in-out infinite alternate;
 
     span {
         display: inline-block;
