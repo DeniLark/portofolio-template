@@ -9,22 +9,10 @@ $colorHighlight: #7C4DFF; // hover, ссылки
 
     @media (max-width: 800px) {
         flex-wrap: wrap;
-        height: 500px; // временное решение
-        overflow: hidden; // временное решение
+        // height: 500px; // временное решение
+        // overflow: hidden; // временное решение
     }
 
-    // временное решение
-    &-stab {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #1A1625;
-        color: #EDEDED;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
 }
 
 .hero-icon {
@@ -236,6 +224,11 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
 
+    &__image {
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
     &-buttons {
         display: flex;
         justify-content: space-around;
@@ -244,6 +237,9 @@ h3 {
 
 .project-img {
     margin-bottom: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .contacts {

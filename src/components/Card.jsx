@@ -1,18 +1,27 @@
 import HaskellLogo from "../assets/haskell_logo.png"
 
-export const Card = () => {
+export const Card = (props) => {
+  const { project } = props
+  const { image, text, githubLink, demoLink } = project
 
-    return <div className="card">
-        <div>
-            <h2 className="card-title">Project name</h2>
-            <img className="project-img" src={HaskellLogo} alt="Project name" />
-            <div className="project-desc">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, error rerum sapiente sint nam alias provident consectetur sunt mollitia repudiandae sed cumque ipsam magni dolore eius sit dolor optio. Illum.</p>
-            </div>
-        </div>
-        <div className="card-buttons">
-            <button className="btn">GitHub</button>
-            {/* <button className="btn">Demo</button> */}
-        </div>
+  return <div className="card">
+    <div>
+      {/* <h2 className="card-title">Project name</h2> */}
+      <div className="card__image">
+        <img className="project-img" src={image} />
+      </div>
+      <div className="project-desc">
+        <p>{text}</p>
+      </div>
     </div>
+    <div className="card-buttons">
+      <a href={githubLink} target="_blank" className="btn">GitHub</a>
+      {demoLink && <a
+        href={demoLink}
+        target="_blank"
+        className="btn"
+      >Demo
+      </a>}
+    </div>
+  </div>
 }
